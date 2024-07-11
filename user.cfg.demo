@@ -2,8 +2,8 @@
 # All config params are explained in depth in the repo.
 
 # API key and Secret key created on Binance
-api_key="7VC3PtSXjGRyIOKypWr3bQg11sgSAAfpqUzG8LsC0TjNRtk8X3i3jIpZrHmjqZUV"
-api_secret_key="qpTBYVLVowsazZlDdWxkyP0JPlUnX9uC5tULtmcXbICO6vdHXFVZ6xSb7TW0uSoh"
+api_key=""
+api_secret_key=""
 
 # Starting coin, leave empty when it's the bridge.
 # It has to be in the supported_coin_list
