@@ -6,7 +6,7 @@ CFG_NAME="user.cfg"
 class Setting:
     def __init__(self): 
       
-        self.ROOT_DIC=os.path.abspath(os.path.join(os.path.dirname(__file__),"..",".."))
+        self.ROOT_DIC=os.path.abspath(os.path.join(os.path.dirname(__file__),"..",))
         self.configPath=os.path.join(self.ROOT_DIC,CFG_NAME)
         config=configparser.ConfigParser()
         config["DEFAULT"]={}

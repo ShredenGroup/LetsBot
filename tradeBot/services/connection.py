@@ -1,8 +1,6 @@
 import math
 import time
 import traceback
-from typing import Dict,Optional
-from binance.streams import ThreadedWebsocketManager
 from binance.client import Client;
 from ..config import Setting
 class binanceConnection:
