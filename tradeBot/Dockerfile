@@ -1,11 +1,16 @@
-FROM python:3.12.4
-WORKDIR /app/tradeBot
+FROM --platform=$BUILDPLATFORM python:3.8 as builder
 
-COPY requirements.txt .
+WORKDIR /install
 
-RUN pip install  -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-COPY . .
+COPY requirements.txt /requirements.txt
+RUN pip install --prefix=/install -r /requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-# Add your CMD or ENTRYPOINT here if needed
-# CMD ["python", "your_script.py"]
+FROM python:3.8
+
+WORKDIR /app
+
+COPY --from=builder /install /usr/local
+COPY . /app/tradeBot
+
+CMD ["python", "-m", "tradeBot"]

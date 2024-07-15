@@ -1,1 +1,1 @@
-from .connection import binanceConnection
+from .binance import binanceConnection
