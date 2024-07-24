@@ -1,1 +1,1 @@
-from .binance import binanceConnection
+from .binance_spot import binanceConnection
