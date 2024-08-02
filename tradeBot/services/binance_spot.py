@@ -19,6 +19,7 @@ class binanceConnection:
     side=Client.SIDE_BUY,
     type=Client.ORDER_TYPE_MARKET,
     quantity=0.01)
-    self.system=binance_client.get_asset_details()
+    self.system=binance_client.get_server_time()
+    
    
     

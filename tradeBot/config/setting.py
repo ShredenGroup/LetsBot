@@ -15,8 +15,11 @@ class Setting:
             print("No user config file detected")
         else:
             config.read(self.configPath)
+        
         self.API_KEY=config.get(USER_CFG_SECTION, "api_key")
         self.API_SECRET=config.get(USER_CFG_SECTION,"api_secret_key")
+        self.API_TEST_KEY=config.get(USER_CFG_SECTION,"api_test_key")
+        self.API_TEST_SECRET=config.get(USER_CFG_SECTION,"api_test_secret_key")
 
             
 
